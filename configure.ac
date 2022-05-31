@@ -10,6 +10,7 @@ AM_INIT_AUTOMAKE
 # make the build process take too long.
 # LT_INIT([disable-shared])
 LT_INIT
+AC_SUBST([LIBTOOL_DEPS])
 
 AC_CONFIG_HEADERS([config.h])
 
