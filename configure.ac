@@ -6,6 +6,11 @@ AC_REVISION($Revision$)
 AC_CONFIG_SRCDIR([arp-scan.c])
 AM_INIT_AUTOMAKE
 
+# Turn off shared libraries during beta-testing, since they
+# make the build process take too long.
+# LT_INIT([disable-shared])
+LT_INIT
+
 AC_CONFIG_HEADERS([config.h])
 
 AC_CANONICAL_HOST
