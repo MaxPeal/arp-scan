@@ -4,7 +4,7 @@
 # https://www.gnu.org/software/libtool/manual/libtool.html#LT_005fINIT
 LIBTOOL_DEPS = @LIBTOOL_DEPS@
 libtool: $(LIBTOOL_DEPS)
-        $(SHELL) ./config.status libtool
+	$(SHELL) ./config.status libtool
 #
 AM_CPPFLAGS = -DDATADIR=\"$(pkgdatadir)\"
 #
