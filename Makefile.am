@@ -1,5 +1,11 @@
 # Process this file with automake to produce Makefile.in
 #
+# Add support for the --enable-shared, --disable-shared, --enable-static, --disable-static, --with-pic, and --without-pic configure flags.6 AC_PROG_LIBTOOL and AM_PROG_LIBTOOL are deprecated names for older versions of this macro; autoupdate will upgrade your configure.ac files. 
+# https://www.gnu.org/software/libtool/manual/libtool.html#LT_005fINIT
+LIBTOOL_DEPS = @LIBTOOL_DEPS@
+libtool: $(LIBTOOL_DEPS)
+        $(SHELL) ./config.status libtool
+
 AM_CPPFLAGS = -DDATADIR=\"$(pkgdatadir)\"
 #
 bin_PROGRAMS = arp-scan
